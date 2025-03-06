@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求职简历</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <!-- Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 粒子效果库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 动画库 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-id-badge logo-icon"></i>
+                  个人网站
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#ai-chat">AI助手</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="name">林智</h1>
+                <p class="title">AI产品经理 / </p>
+                <p class="title">本简历网站是基于Cursor编辑器 + Claude模型AI生成，整个过程有本人通过Chat对话、零代码完成！ </p>
+            </div>
+            <div class="hero-image">
+                <img src="pdf/证件照.jpg" alt="个人证件照" class="profile-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人简介 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <div class="bio">
+                    <p>作为一名拥有多年经验的高级产品经理，我专注于AI产品创新与技术解决方案的设计与落地。在产品生命周期管理、用户体验优化和跨团队协作方面有着丰富的实践经验。</p>
+                    <p>我的核心优势：</p>
+                    <ul class="bio-list">
+                        <li>深入的AI领域产品规划与落地经验，包括机器学习模型应用、自然语言处理等方向</li>
+                        <li>出色的产品战略思维，能够准确把握市场需求并转化为可执行的产品方案</li>
+                        <li>强大的跨部门协作能力，善于与技术团队、设计团队和业务部门紧密合作</li>
+                        <li>优秀的数据分析能力，擅长通过数据驱动产品决策</li>
+                    </ul>
+                    <p>我始终保持对新技术的学习热情，致力于将前沿AI技术转化为实际的商业价值。目前专注于大语言模型在企业级应用场景中的创新与实践。</p>
+                </div>
+                <div class="skills-cloud">
+                    <!-- 技能标签云将通过JS动态生成 -->
+                </div>
+            </div>
+            <div class="timeline">
+                <!-- 时间轴将通过JS动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>项目经验</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="project-duration">2022.03 - 2022.12</span>
+                    <h3 class="project-title">AI训练平台</h3>
+                    <div class="project-role">产品经理</div>
+                    <p class="project-description">企业级机器学习模型训练和部署平台，提供一站式AI模型开发环境，支持自动化训练和快速部署。</p>
+                    <div class="project-tags">
+                        <span class="project-tag">机器学习</span>
+                        <span class="project-tag">模型训练</span>
+                        <span class="project-tag">AutoML</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <span class="project-duration">2021.06 - 2022.02</span>
+                    <h3 class="project-title">智能对话系统</h3>
+                    <div class="project-role">产品经理</div>
+                    <p class="project-description">面向金融行业的智能对话系统，支持多语言、多场景的客户服务，集成RPA功能实现业务流程自动化。</p>
+                    <div class="project-tags">
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">RPA</span>
+                        <span class="project-tag">金融科技</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目轮播 -->
+    <section class="carousel-section">
+        <div class="container">
+            <div class="carousel">
+                <!-- 轮播内容将通过JS动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- AI对话界面 -->
+    <section id="ai-chat" class="ai-chat-section">
+        <div class="container">
+            <h2>与AI助手对话</h2>
+            <div class="chat-interface">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- 消息内容将通过JS动态生成 -->
+                </div>
+                <div class="chat-input">
+                    <textarea id="messageInput" placeholder="输入消息..."></textarea>
+                    <button onclick="sendMessage()">发送</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能展示 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>专业技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card" onclick="openPDF('pdf/艾涧科技产品介绍（售前解决方案）.pdf')">
+                    <div class="skill-icon">🤖</div>
+                    <h3>智能客服产品方案</h3>
+                    <p>基于大语言模型的智能客服解决方案</p>
+                </div>
+                <div class="skill-card" onclick="openPDF('pdf/数据分析报告.pdf')">
+                    <div class="skill-icon">📊</div>
+                    <h3>数据分析报告</h3>
+                    <p>用户行为分析与产品优化建议</p>
+                </div>
+                <div class="skill-card" onclick="openPDF('pdf/AI产品规划.pdf')">
+                    <div class="skill-icon">🎯</div>
+                    <h3>AI产品规划</h3>
+                    <p>人工智能产品战略与落地方案</p>
+                </div>
+                <div class="skill-card" onclick="openPDF('pdf/用户研究报告.pdf')">
+                    <div class="skill-icon">🔍</div>
+                    <h3>用户研究报告</h3>
+                    <p>深度用户访谈与需求分析</p>
+                </div>
+            </div>
+
+            <!-- 相关链接 -->
+            <div class="related-links">
+                <h2>相关链接</h2>
+                <div class="links-grid">
+                    <a href="https://cursor.sh" target="_blank" class="link-card">
+                        <div class="link-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <span class="link-name">Cursor</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="link-card">
+                        <div class="link-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <span class="link-name">GitHub</span>
+                    </a>
+                    <a href="https://huggingface.co" target="_blank" class="link-card">
+                        <div class="link-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="link-name">HuggingFace</span>
+                    </a>
+                    <a href="https://deepseek.ai" target="_blank" class="link-card">
+                        <div class="link-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="link-name">DeepSeek</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF查看器弹窗 -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfTitle">文档查看</h3>
+                <button onclick="closePDF()" class="close-pdf">&times;</button>
+            </div>
+            <div class="pdf-container">
+                <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html> 
