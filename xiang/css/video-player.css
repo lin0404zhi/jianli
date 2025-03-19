@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 左侧播放区域 */
+.video-player-section {
+    flex: 1;
+    background: #ffffff;  /* 改为白色背景 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-player {
+    width: auto;  /* 改为自动宽度 */
+    height: auto;  /* 改为自动高度 */
+    max-width: 100%;  /* 最大宽度限制在容器内 */
+    max-height: 90vh;  /* 最大高度限制在视窗高度的90% */
+    background: #ffffff;  /* 视频播放器本身保持黑色背景 */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: contain;  /* 保持视频原始比例 */
+}
+
+/* 右侧视频列表区域 */
+.video-list-section {
+    width: 240px;  /* 从 360px 改为 240px */
+    background: #fff;
+    overflow-y: auto;
+    padding: 16px;  /* 稍微减小内边距 */
+    border-left: 1px solid #eee;
+}
+
+/* 视频卡片样式 */
+.video-item {
+    background: #fff;
+    border-radius: 8px;  /* 稍微减小圆角 */
+    padding: 8px;  /* 减小内边距 */
+    margin-bottom: 12px;  /* 减小底部间距 */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.video-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.video-item.active {
+    background: #e6f4ff;
+    border: 1px solid #91caff;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 120px;  /* 从 180px 改为 120px */
+    background: #f5f5f5;
+    border-radius: 6px;
+    margin-bottom: 8px;  /* 减小底部间距 */
+}
+
+.video-info {
+    padding: 0 4px;
+}
+
+.video-title {
+    font-size: 13px;  /* 稍微减小字体大小 */
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;  /* 减小底部间距 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.video-duration {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 自定义滚动条 */
+.video-list-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.video-list-section::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.video-list-section::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .video-list-section {
+        width: 220px;  /* 调整响应式宽度 */
+    }
+}
+
+/* 容器样式 */
+.container {
+    display: flex;
+    height: 100vh;  /* 使用视窗高度 */
+    overflow: hidden;  /* 防止整体滚动 */
+}
+
+/* 左侧区域固定 */
+.left-section {
+    flex: 1;
+    height: 100vh;  /* 固定高度 */
+    position: sticky;  /* 保持固定 */
+    top: 0;
+    overflow: hidden;  /* 防止内部滚动 */
+}
+
+/* 右侧视频列表区域 */
+.video-list-section {
+    width: 240px;
+    height: 100vh;  /* 使用视窗高度 */
+    overflow-y: auto;  /* 只允许垂直滚动 */
+    overflow-x: hidden;  /* 禁止水平滚动 */
+    padding: 16px;
+    border-left: 1px solid #eee;
+    background: #fff;
+    position: relative;  /* 用于滚动阴影 */
+}
+
+/* 优化滚动条样式 */
+.video-list-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.video-list-section::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+.video-list-section::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.video-list-section::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 滚动阴影效果 */
+.video-list-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to top, rgba(255,255,255,0.8), transparent);
+    pointer-events: none;
+}
+
+.video-list-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 确保播放器容器不滚动 */
+.player-container {
+    height: calc(100vh - 80px);  /* 减去主题说明板块的高度 */
+    overflow: hidden;
+}
+
+/* 主题说明板块固定高度 */
+.theme-header {
+    height: 80px;  /* 固定高度 */
+    min-height: auto;  /* 覆盖之前的 min-height */
+}
+
+/* 防止body滚动 */
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 主题说明板块样式     background-image: url('../img/xinling.png'); */
+.theme-header {
+    padding: 16px 32px;
+    border-bottom: 1px solid #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;  /* 改为横向排列 */
+    align-items: center;  /* 垂直居中对齐 */
+    position: relative;
+    gap: 16px;  /* logo 和文字之间的间距 */
+}
+
+/* logo样式 */
+.theme-logo {
+    position: relative;
+    z-index: 2;
+    width: 40px;  /* logo宽度 */
+    height: 40px;  /* logo高度 */
+    flex-shrink: 0;  /* 防止logo被压缩 */
+}
+
+.theme-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* 保持图片比例 */
+}
+
+/* 文字内容容器 */
+.theme-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+/* 半透明遮罩 */
+.theme-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 1;
+}
+
+/* 美化标题文字 */
+.theme-title {
+    position: relative;
+    z-index: 2;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;  /* 深色系 */
+    margin-bottom: 4px;  /* 减小间距 */
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;  /* 优先使用微软雅黑 */
+    letter-spacing: 1px;  /* 增加字间距 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  /* 添加轻微文字阴影 */
+}
+
+/* 美化描述文字 */
+.theme-description {
+    position: relative;
+    z-index: 2;
+    font-size: 13px;
+    color: #5c7a99;  /* 柔和的蓝灰色 */
+    line-height: 1.4;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* 调整视频播放区域 */
+.video-player-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+} 
+/* 播放区容器 */
+.player-container {
+    display: flex;
+    gap: 24px;
+    padding: 20px;
+    background: #fff;
+}
+
+/* 视频播放器区域 */
+.video-player-section {
+    flex: 3;  /* 占据更大空间 */
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 文本说明板块 */
+.video-text-panel {
+    flex: 2;
+    max-width: 360px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 文本头部 */
+.text-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.text-time {
+    font-size: 13px;
+    color: #999;
+}
+
+/* 文本内容区 */
+.text-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.text-paragraph {
+    margin-bottom: 20px;
+}
+
+.text-paragraph p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+/* 标签样式 */
+.text-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.tag {
+    padding: 4px 12px;
+    background: #f5f5f5;
+    border-radius: 16px;
+    font-size: 12px;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background: #e6f4ff;
+    color: #1890ff;
+}
+
+/* 滚动条美化 */
+.text-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.text-content::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 2px;
+}
+
+.text-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 响应式处理 */
+@media (max-width: 1200px) {
+    .player-container {
+        flex-direction: column;
+    }
+    
+    .video-text-panel {
+        /* ... 现有样式 ... */
+        transition: opacity 0.3s ease;
+    }
+    
+    .text-paragraph p {
+        /* ... 现有样式 ... */
+        transition: all 0.3s ease;
+    }
+    
+    .tag {
+        /* ... 现有样式 ... */
+        transition: all 0.2s ease;
+    }
+}

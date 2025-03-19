@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心灵驿站</title>
+    <link rel="stylesheet" href="css/video-player.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧区域 -->
+        <div class="left-section">
+            <!-- 主题说明板块 -->
+            <div class="theme-header">
+                <!-- 添加logo -->
+                <div class="theme-logo">
+                    <img src="./images/xin.png">
+                </div>
+                <!-- 文字内容包装器 -->
+                <div class="theme-content">
+                    <h1 class="theme-title">心灵驿站</h1>
+                    <p class="theme-description">暂时放下手中的工作，感受一下诗和远方，哇，沿着山水轨迹，踏遍人间春秋！</p>
+                </div>
+            </div>
+
+            <!-- 修改播放区域的结构 -->
+            <div class="player-container">
+                <!-- 视频播放区 -->
+                <div class="video-player-section">
+                    <video id="mainPlayer" class="video-player" controls>
+                        <source src="" type="video/mp4">
+                        您的浏览器不支持 HTML5 视频播放。
+                    </video>
+                </div>
+
+                <!-- 新增文本说明板块 -->
+                <div class="video-text-panel">
+                    <div class="text-header">
+                        <h2 class="text-title">视频文本</h2>
+                        <span class="text-time">2024-01-25</span>
+                    </div>
+                    <div class="text-content">
+                        <div class="text-paragraph">
+                            <p>这里是视频的文本说明，可以包含多个段落。</p>
+                            <p>每个段落都有适当的间距和行高，确保文本清晰易读。</p>
+                        </div>
+                        <div class="text-tags">
+                            <span class="tag">#生活感悟</span>
+                            <span class="tag">#心灵驿站</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧视频列表 -->
+        <div class="video-list-section" id="videoList">
+            <div id="videoListContainer"></div>
+        </div>
+    </div>
+    <script src="js/video-player.js"></script>
+</body>
+</html> 
