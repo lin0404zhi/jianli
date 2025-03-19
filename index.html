@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站</title>
+    <link rel="icon" href="pdf/icons/cursor.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/custom.css"> <!-- 添加这一行 -->
+    <!-- Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 粒子效果库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 动画库 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Markdown 解析库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 代码高亮库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/lib/highlight.min.js"></script>
+    <script src="js/job-analysis.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-id-badge logo-icon"></i>
+                  个人网站
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">关于我</a></li>
+                <li><a href="#projects">项目经历</a></li>
+                <li><a href="#work">工作经历</a></li>
+                <li><a href="#skills">产品方案</a></li>
+                <li><a href="#ai-chat">AI助手</a></li>
+                <li><a href="#ai-news">AI动态时讯</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="name">林智</h1>
+                <p class="title">福建理工大学 / 信息与计算科学 / 13905914298 /  </p>
+                <p class="title"> </p>
+                <p class="title">简历界面效果基于Cursor编辑器+Claude模型AI零代码生成，都是本人以提示词，调整样式、文本完成！ </p>
+            </div>
+            <div class="hero-image">
+                <img src="pdf/证件照.jpg" alt="个人证件照" class="profile-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人简介 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 style="display: flex; align-items: center; justify-content: space-between;">
+                <span>关于我</span>
+                <div class="analysis-links">
+                    <a href="rebang/pm-trending.html" class="pm-analysis-link" target="_blank">
+                        <i class="fas fa-chart-line"></i>
+                        <span>产品经理岗位及匹配分析</span>
+                    </a>
+                    <a href="xiang/video-player.html" class="pm-analysis-link2" target="_blank">
+                        <i class="fas fa-heart"></i>
+                        <span>放空一下吧</span>
+                    </a>
+                </div>
+            </h2>
+            <div class="about-content">
+                <div class="bio">
+                    <p>It行业16年，从Java研发、需求\实施项目经理、产品经理、AI产品解决方案。</p>
+                    <p></p>
+                    <ul class="bio-list">
+                        <li>一、前十年：联通集团B域电子营业厅系统，电信M域省级Crm系统、4A系统，物联网行业硬+软+运营定制系统。</li>
+                        <li>二、后六年：1、AI视觉技术在人体姿态识别的应用：体育教学，体育中考，军事体育。2、AIGC多模态的行业应用：AI空间设计，AI智能客服，知识库,多模态saas平台。</li>
+                        <li>三、1、高保真axure原型设计。2、全维度PPT、需求文档方案。3、熟悉SQL、NOSQL。4、Python开源代码验证能力。</li>
+                        <li>四、对前沿AI技术的学习，如AI视频、AI生图、语音识别、AI编程、大模型应用等，并熟练掌握prompt提示词。/li>
+                        <li>五、近期热门的Cursor AI编程。详见个人网站：lz.222242.xyz</li>
+                    </ul>
+                    <p></p>
+                </div>
+                <div class="expectation-grid">
+                    <div class="expectation-cards">
+                        <div class="expectation-card">
+                            <div class="expectation-icon">
+                                <img src="pdf/icons/ai-chanp.svg" alt="AI高级产品经理">
+                            </div>
+                            <div class="expectation-content">
+                                <div class="expectation-title"> AI高级产品经理</div>
+                                <div class="expectation-detail">
+                                    <span class="city"><i class="fas fa-map-marker-alt"></i>  福州</span>
+                                    <span class="industry"><i class="fas fa-industry"></i> 人工智能</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expectation-card">
+                            <div class="expectation-icon">
+                                <img src="pdf/icons/qingnian.svg" alt="项目经理">
+                            </div>
+                            <div class="expectation-content">
+                                <div class="expectation-title"> 项目经理</div>
+                                <div class="expectation-detail">
+                                    <span class="city"><i class="fas fa-map-marker-alt"></i>  福州</span>
+                                    <span class="industry"><i class="fas fa-building"></i> 企业产品</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expectation-card">
+                            <div class="expectation-icon">
+                                <img src="pdf/icons/biye.svg" alt="AI解决方案经理">
+                            </div>
+                            <div class="expectation-content">
+                                <div class="expectation-title">AI解决方案经理</div>
+                                <div class="expectation-detail">
+                                    <span class="city"><i class="fas fa-map-marker-alt"></i>  福州</span>
+                                    <span class="industry"><i class="fas fa-briefcase"></i> ToB服务</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-cloud">
+                <!-- 技能标签云将通过JS动态生成 -->
+            </div>
+            
+            <!-- 个人特点 -->
+            <div class="personal-traits">
+                <div class="traits-grid">
+                    <div class="trait-item">
+                        <div class="trait-icon">
+                            <img src="pdf/icons/AxureRP.png" alt="Axure">
+                        </div>
+                        <div class="trait-title">AxureRP</div>
+                        <div class="trait-description">高保真原型设计：B端、C端原型快速输出</div>
+                    </div>
+                    <div class="trait-item">
+                        <div class="trait-icon">
+                            <img src="pdf/icons/ppt.png" alt="ppt">
+                        </div>
+                        <div class="trait-title">Ppt</div>
+                        <div class="trait-description">PPT输出：解决方案、售前方案、汇报方案、应标方案</div>
+                    </div>
+                    <div class="trait-item">
+                        <div class="trait-icon">
+                            <img src="pdf/icons/AI.png" alt="xuqiu">
+                        </div>
+                        <div class="trait-title">需求全栈能力</div>
+                        <div class="trait-description">需求说明、概要说明、验收报告、实施跟进、需求结项等</div>
+                    </div>
+                    <div class="trait-item">
+                        <div class="trait-icon">
+                            <img src="pdf/icons/Navicat.png" alt="sql">
+                        </div>
+                        <div class="trait-title">sql</div>
+                        <div class="trait-description">SQL脚本熟练：库表建模、统计分析脚本、存储过程等</div>
+                    </div>
+                    <div class="trait-item">
+                        <div class="trait-icon">
+                            <img src="pdf/icons/python.png" alt="python">
+                        </div>
+                        <div class="trait-title">Python</div>
+                        <div class="trait-description">开源效果验证、插件应用验证、案例库应用</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <!-- 时间轴将通过JS动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经历 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>项目经历</h2>
+            <!-- 项目经历部分 -->
+            <div class="project-grid">
+                <!-- 第一个卡片保持不变 -->
+                
+                <!-- 智能客服机器人卡片 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-title">智能客服机器人</h3>
+                            <span class="project-duration">2023.01 - 2023.05</span>
+                        </div>
+                    </div>
+                    <div class="project-role">产品经理</div>
+                    <p class="project-description">基于大语言模型的新一代智能客服系统，支持多轮对话、意图理解和业务流程自动化。</p>
+                    <div class="project-tags">
+                        <span class="project-tag">对话系统</span>
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">流程自动化</span>
+                    </div>
+                </div>
+            
+                <!-- 知识图谱平台卡片 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-network"></i>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-title">知识图谱平台</h3>
+                            <span class="project-duration">2022.07 - 2022.12</span>
+                        </div>
+                    </div>
+                    <div class="project-role">产品经理</div>
+                    <p class="project-description">企业级知识图谱构建和应用平台，支持自动化知识抽取、关系推理和可视化展示。</p>
+                    <div class="project-tags">
+                        <span class="project-tag">知识图谱</span>
+                        <span class="project-tag">数据挖掘</span>
+                        <span class="project-tag">可视化</span>
+                    </div>
+                </div>
+            
+                <!-- AI训练平台卡片 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-title">AI训练平台</h3>
+                            <span class="project-duration">2022.03 - 2022.06</span>
+                        </div>
+                    </div>
+                    <div class="project-role">产品经理</div>
+                    <p class="project-description">企业级机器学习模型训练和部署平台，提供一站式AI模型开发环境，支持自动化训练和快速部署。</p>
+                    <div class="project-tags">
+                        <span class="project-tag">机器学习</span>
+                        <span class="project-tag">模型训练</span>
+                        <span class="project-tag">AutoML</span>
+                    </div>
+                </div>
+            
+                <!-- 智能对话系统卡片 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-title">智能对话系统</h3>
+                            <span class="project-duration">2021.06 - 2022.02</span>
+                        </div>
+                    </div>
+                    <div class="project-role">产品经理</div>
+                    <p class="project-description">面向金融行业的智能对话系统，支持多语言、多场景的客户服务，集成RPA功能实现业务流程自动化。</p>
+                    <div class="project-tags">
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">RPA</span>
+                        <span class="project-tag">金融科技</span>
+                    </div>
+                </div>
+            
+                <!-- AI芯片解决方案卡片 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-title">AI芯片解决方案</h3>
+                            <span class="project-duration">2021.01 - 2021.05</span>
+                        </div>
+                    </div>
+                    <div class="project-role">产品专家</div>
+                    <p class="project-description">面向边缘计算的AI芯片应用解决方案，实现模型量化、性能优化和端侧部署。</p>
+                    <div class="project-tags">
+                        <span class="project-tag">边缘计算</span>
+                        <span class="project-tag">模型优化</span>
+                        <span class="project-tag">硬件加速</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作经历部分 -->
+    <section id="work" class="work-history">
+        <div class="container">
+            <h2>工作经历</h2>
+            <div class="work-list">
+                <!-- 艾涧科技（已经是正确的图片格式）-->
+                <div class="work-item">
+                    <div class="work-icon">
+                        <img src="pdf/icons/aijian.png" alt="艾涧科技">
+                    </div>
+                    <div class="work-content">
+                        <h3>
+                            艾涧科技有限公司
+                            <a href="https://aijture.com/#/home" target="_blank" class="company-website-btn">查看官网</a>
+                        </h3>
+                        <div class="work-info">
+                            <span class="work-duration">2023.01 - 至今</span>
+                            <span class="work-position">AI产品总监</span>
+                        </div>
+                        <p class="work-description">负责公司AI产品线的整体规划与管理，主导大语言模型应用平台的产品设计与落地</p>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-icon">
+                        <img src="pdf/icons/aijian.png" alt="艾涧科技">
+                    </div>
+                    <div class="work-content">
+                        <h3>
+                            深圳市腾讯计算机系统有限公司
+                            <a href="https://www.tencent.com" target="_blank" class="company-website-btn">查看官网</a>
+                        </h3>
+                        <div class="work-info">
+                            <span class="work-duration">2021.03 - 2022.12</span>
+                            <span class="work-position">高级产品经理</span>
+                        </div>
+                        <p class="work-description">负责AI训练平台产品规划与设计，推动机器学习模型在企业级应用的落地</p>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-icon">
+                        <img src="pdf/icons/aijian.png" alt="艾涧科技">
+                    </div>
+                    <div class="work-content">
+                        <h3>
+                            华为技术有限公司
+                            <a href="https://www.huawei.com" target="_blank" class="company-website-btn">查看官网</a>
+                        </h3>
+                        <div class="work-info">
+                            <span class="work-duration">2019.06 - 2021.02</span>
+                            <span class="work-position">产品经理</span>
+                        </div>
+                        <p class="work-description">负责智能客服产品线的规划与设计，推动NLP技术在客服场景的应用</p>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-icon">
+                        <img src="pdf/icons/aijian.png" alt="艾涧科技">
+                    </div>
+                    <div class="work-content">
+                        <h3>
+                            中兴通讯股份有限公司
+                            <a href="https://www.zte.com.cn" target="_blank" class="company-website-btn">查看官网</a>
+                        </h3>
+                        <div class="work-info">
+                            <span class="work-duration">2017.07 - 2019.05</span>
+                            <span class="work-position">产品经理</span>
+                        </div>
+                        <p class="work-description">负责运营商IT服务产品的规划与设计，推动传统IT向智能化转型</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品解决方案 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>我的产品方案</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-image">
+                        <img src="pdf/images/ai-solution.png" alt="AI解决方案及产品服务主题图 - AIGC模型应用场景">
+                    </div>
+                    <div class="skill-content">
+                        <button class="view-pdf-btn" onclick="openPDF('pdf/ai-product-service.pdf')">
+                            <i class="fas fa-file-pdf"></i> 点击查看方案
+                        </button>
+                        <h3>AI解决方案及产品服务</h3>
+                        <p>基于AIGC模型为各行业提供垂直领域提供人工智能方案</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-image">
+                        <img src="pdf/images/3d-design.png" alt="3D空间设计AI方案主题图 - 智能空间规划展示">
+                    </div>
+                    <div class="skill-content">
+                        <button class="view-pdf-btn" onclick="openPDF('pdf/data-analysis.pdf')">
+                            <i class="fas fa-file-pdf"></i> 点击查看方案
+                        </button>
+                        <h3>SI-3D空间设计AI方案</h3>
+                        <p>基于3D-MAX模型，提供空间设计方案</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-image">
+                        <img src="pdf/images/deepseek-plan.png" alt="AI产品规划主题图 - 人工智能战略规划">
+                    </div>
+                    <div class="skill-content">
+                        <button class="view-pdf-btn" onclick="openPDF('pdf/ai-product-plan.pdf')">
+                            <i class="fas fa-file-pdf"></i> 点击查看方案
+                        </button>
+                        <h3>Deepseek企业业务应用</h3>
+                        <p>人工智能产品战略与落地方案</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-image">
+                        <img src="pdf/images/it-service.png" alt="用户研究报告主题图 - 深度访谈与需求分析">
+                    </div>
+                    <div class="skill-content">
+                        <button class="view-pdf-btn" onclick="openPDF('pdf/user-research.pdf')">
+                            <i class="fas fa-file-pdf"></i> 点击查看方案
+                        </button>
+                        <h3>行业产品方案</h3>
+                        <p>AI智慧体育产品, 传统CV检测产品, C端APP产品, 运营商IT服务产品</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI对话界面 -->
+    <section id="ai-chat" class="ai-chat-section">
+        <div class="container">
+            <h2>AI对话助手</h2>
+            <div class="chat-interface">
+                <div class="chat-header">
+                    <select id="modelSelect" class="model-select">
+                        <option value="deepseek-chat">DeepSeek</option>
+                        <option value="Qwen2.5-32B-Instruct">千问 2.5-32B</option>
+                    </select>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <!-- 消息内容将通过JS动态生成 -->
+                </div>
+                <div class="chat-input">
+                    <textarea id="messageInput" placeholder="开始你的提问吧，我会调用deepseek-37B模型回复你！！ "></textarea>
+                    <button onclick="sendMessage()">发送</button>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- 相关链接 -->
+    <div id="related-links" class="related-links container">
+        <h2>相关链接</h2>
+        <div class="links-grid">
+            <a href="https://www.cursor.com/cn" target="_blank" class="link-card">
+                <div class="link-icon">
+                    <img src="pdf/icons/cursor.png" alt="Cursor">
+                </div>
+                <span class="link-name">Cursor</span>
+            </a>
+            <a href="https://github.com" target="_blank" class="link-card">
+                <div class="link-icon">
+                    <img src="pdf/icons/GitHub.svg" alt="GitHub">
+                </div>
+                <span class="link-name">GitHub</span>
+            </a>
+            <a href="https://huggingface.co" target="_blank" class="link-card">
+                <div class="link-icon">
+                    <img src="pdf/icons/huggingface.svg" alt="HuggingFace">
+                </div>
+                <span class="link-name">HuggingFace</span>
+            </a>
+            <a href="https://www.deepseek.com/" target="_blank" class="link-card">
+                <div class="link-icon">
+                    <img src="pdf/icons/deepseek.svg" alt="DeepSeek">
+                </div>
+                <span class="link-name">DeepSeek</span>
+            </a>
+            <a href="https://tongyi.aliyun.com/" target="_blank" class="link-card">
+                <div class="link-icon">
+                    <img src="pdf/icons/Qianwen.svg" alt="千问">
+                </div>
+                <span class="link-name">千问</span>
+            </a>
+            <a href="https://ai.aijture.com/#/login" target="_blank" class="link-card">
+                <div class="link-icon">
+                    <img src="pdf/icons/xiaoai.png" alt="小艾助理">
+                </div>
+                <span class="link-name">小艾助理</span>
+            </a>
+            <a href="https://blog.csdn.net/linzhi0404?type=blog" target="_blank" class="link-card">
+                <div class="link-icon">
+                    <img src="pdf/icons/csdn.svg" alt="林智CSDN">
+                </div>
+                <span class="link-name">Csdn Linzhi</span>
+            </a>
+        </div>
+    </div>
+    <!-- AI动态时讯 -->
+    <section id="ai-news" class="image-carousel">
+        <div class="container">
+            <h2 class="carousel-title">AI动态时讯</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-item expanded" data-index="0">
+                    <img src="pdf/images/manus.png" alt="Manus">
+                    <div class="item-title">Manus刷屏，产品经理到底应该怎么拥抱AI？</div>
+                </div>
+                <div class="carousel-item" data-index="1">
+                    <img src="pdf/images/matrix.png" alt="Matrix">
+                    <div class="item-title">Matrix-Zero世界模型，开启空间智能新时代</div>
+                </div>
+                <div class="carousel-item" data-index="2">
+                    <img src="pdf/images/deepseek+kimi.png" alt="DeepSeek">
+                    <div class="item-title">Deepseek与Kimi联袂:重塑PPT创作，开启智能演示新纪元</div>
+                </div>
+                <div class="carousel-item" data-index="3">
+                    <img src="pdf/images/saas.png" alt="saas">
+                    <div class="item-title">AI正在杀死SaaS？</div>
+                </div>
+                <div class="carousel-item" data-index="4">
+                    <img src="pdf/images/yutree.png" alt="yutree">
+                    <div class="item-title">宇树科技到底是个什么样的公司？</div>
+                </div>
+            </div>
+            <div class="project-descriptions">
+                <div class="project-description-item active" data-index="0">
+                    <a href="https://www.woshipm.com/ai/6189834.html" class="project-link" target="_blank">了解更多</a>
+                </div>
+                <div class="project-description-item" data-index="1">
+                    <a href="https://blog.csdn.net/csdnnews/article/details/145627946" class="project-link" target="_blank">了解更多</a>
+                </div>
+                <div class="project-description-item" data-index="2">
+                    <a href="https://blog.csdn.net/2301_80350265/article/details/145944662?spm=1001.2100.3001.7377&utm_medium=distribute.pc_feed_blog_category.none-task-blog-classify_tag-1-145944662-null-null.nonecase&depth_1-utm_source=distribute.pc_feed_blog_category.none-task-blog-classify_tag-1-145944662-null-null.nonecase" class="project-link" target="_blank">了解更多</a>
+                </div>
+                <div class="project-description-item" data-index="3">
+                    <a href="https://www.woshipm.com/share/6183586.html" class="project-link" target="_blank">了解更多</a>
+                </div>
+                <div class="project-description-item" data-index="4">
+                    <a href="https://mp.weixin.qq.com/s?src=11&timestamp=1741577603&ver=5859&signature=D8-*MN0vc93s0-Kpst*m10PAlJ4Y7NPB5I-ba1FKiysWXe6XJvPKwMyV*wkAlW3CWN7FmarG0ZMbtsGFNwOnHEIDkQ8Vj2u9oEKbsxvtSlqL5pmKpqVdgxg22XAKftW7&new=1" class="project-link" target="_blank">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PDF查看器弹窗 -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfTitle">文档查看</h3>
+                <button onclick="closePDF()" class="close-pdf">&times;</button>
+            </div>
+            <div class="pdf-container">
+                <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const descriptions = document.querySelectorAll('.project-description-item');
+
+        carouselItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // 移除所有项目的expanded类
+                carouselItems.forEach(i => i.classList.remove('expanded'));
+                // 为当前项目添加expanded类
+                this.classList.add('expanded');
+                
+                // 隐藏所有描述
+                descriptions.forEach(d => d.classList.remove('active'));
+                // 显示当前项目的描述
+                const index = this.getAttribute('data-index');
+                descriptions[index].classList.add('active');
+            });
+        });
+    });
+    </script>
+
+
+</body>
+</html>

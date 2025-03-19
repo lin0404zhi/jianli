@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品经理岗位AI分析</title>
+    <link rel="stylesheet" href="pm-trending.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-fire"></i> 产品经理岗位职能AI分析</h1>
+            <div class="update-time">更新时间：<span id="lastUpdate"></span></div>
+        </header>
+        
+        <main class="main-content">
+            <section class="trending-list">
+                <div class="list-header">
+                    <h2>本月热搜榜单</h2>
+                    <span class="list-tip">deepseek深度分析</span>
+                </div>
+                <div id="jobList" class="job-list">
+                    <!-- 职位列表将通过JavaScript动态加载 -->
+                </div>
+            </section>
+            <section class="job-analysis">
+                <div id="analysisContent" class="analysis-content">
+                    <div class="placeholder-content">
+                        <img src="../rebang/icon/dongtu2.gif" alt="AI分析" class="analysis-icon">
+                        <p>点击左侧职位查看AI分析</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>数据来源：Boss直聘、拉勾网等开源数据</p>
+        </footer>
+    </div>
+
+    <!-- 新增职业匹配分析模块 -->
+    <div class="container">
+        <div class="career-matching-section">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> 职业匹配分析</h2>
+            
+            <!-- 职业匹配表单 -->
+            <div class="career-matching-form">
+                <!-- 标题区域 -->
+                <div class="form-header">
+                    <h3>人资小姐姐，请选择你的理想型！</h3>
+                    <p>AI将自动为你匹配分析</p>
+                </div>
+            
+                <!-- 选项区域 -->
+                <div class="option-groups">
+                    <!-- 行业经验 -->
+                    <div class="option-group">
+                        <label class="option-label">行业经验：</label>
+                        <div class="option-grid">
+                            <label class="option-item">
+                                <input type="checkbox" checked>
+                                <span>互联网/AI</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox" checked>
+                                <span>电子/贸易商</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>广告传媒/文化体育</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>房地产/汽车/能源</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>政府/金融/制造</span>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <!-- 职位经验 -->
+                    <div class="option-group">
+                        <label class="option-label">职位经验：</label>
+                        <div class="option-grid">
+                            <label class="option-item">
+                                <input type="checkbox" checked>
+                                <span>AI产品经理</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox" checked>
+                                <span>需求分析师</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>实施项目经理</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>软件开发工程师</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>测试工程师</span>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <!-- 接受出差 -->
+                    <div class="option-group">
+                        <label class="option-label">接受出差：</label>
+                        <div class="option-grid">
+                            <label class="option-item">
+                                <input type="checkbox" checked>
+                                <span>可以出差</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>短期出差</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>不能出差</span>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <!-- 35岁门槛 -->
+                    <div class="option-group">
+                        <label class="option-label">35岁门槛：</label>
+                        <div class="option-grid">
+                            <label class="option-item">
+                                <input type="checkbox" checked>
+                                <span>小于35岁</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>小于30岁</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="checkbox">
+                                <span>不限</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- 提示和按钮区域 -->
+                <div class="form-footer">
+                    <p>根据你的筛选，deepseek为你进行"伙伴"匹配分析</p>
+                    <button class="start-analysis-btn">
+                        <i class="fas fa-robot"></i> 点击deepseek分析
+                    </button>
+                    <!-- 在 form-footer 内，start-analysis-btn 按钮下方添加 -->
+                    <div class="analysis-output">
+                        <h4>匹配度总结</h4>
+                        <div class="analysis-output-content">
+                            <!-- AI 分析内容将通过 JavaScript 动态插入 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pm-trending.js"></script>
+</body>
+</html>
